@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "home": "Strona Domowa",
+    "profile": "Profil",
+    "calendar": "Kalendarz",
+    "competitions": "Zawody",
+    "shooters": "Strzelcy",
+    "visits": "Wizy na strzelnicy"
+  },
+  "accountMenu": {
+    "logout": "Wyloguj"
+  },
+  "header": {
+    "chooseLanguage": "Wybierz język"
+  }
+}
