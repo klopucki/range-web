@@ -12,5 +12,11 @@
   },
   "header": {
     "chooseLanguage": "Wybierz język"
+  },
+  "footer": {
+    "contact": "Contact",
+    "carrier": "Carrier",
+    "serviceRegulation": "Service Regulation",
+    "rangeRegulation": "Range Regulation"
   }
 }

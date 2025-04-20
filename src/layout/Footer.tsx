@@ -1,11 +1,14 @@
 import {Container, Grid, useMediaQuery, useTheme} from "@mui/material";
 import Box from "@mui/material/Box";
 import * as React from "react";
+import {useTranslation} from "react-i18next";
 
 export default function Footer() {
 
     const theme = useTheme();
     const greaterThanMid = useMediaQuery(theme.breakpoints.up("md"));
+
+    const {t} = useTranslation();
 
     return <Box
         sx={{
@@ -20,16 +23,16 @@ export default function Footer() {
     >
         <Container maxWidth="lg">
             <Grid container spacing={2}>
-                <Grid size={{ xs: 6, md: 8 }}>
-                    <p>Kontak</p>
-                    <p>Miejsce na adres</p>
-                    <p>Miejsce na nr konta</p>
-                    <p>Miejsce na nip i rego</p>
+                <Grid size={{xs: 6, md: 8}}>
+                    <p>{t('footer.contact')}</p>
+                    <p>Tulipanowa 54, Chrząszczzębożyce</p>
+                    <p>83 7434 1223 0000 2323 4321</p>
+                    <p>REGON: 2342343311</p>
                 </Grid>
-                <Grid size={{ xs: 6, md: 4 }}>
-                    <p>Oferty pracy</p>
-                    <p>Regulamin serwisu</p>
-                    <p>Regulamin strzelnicy</p>
+                <Grid size={{xs: 6, md: 4}}>
+                    <p>{t('footer.carrier')}</p>
+                    <p>{t('footer.serviceRegulation')}</p>
+                    <p>{t('footer.rangeRegulation')}</p>
                 </Grid>
             </Grid>
         </Container>
