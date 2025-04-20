@@ -21,9 +21,9 @@ export default function AccountIcon() {
         setAnchorEl(null);
     };
 
+    // fixme after click, component keeps icon in circle
     return <div className="user-details-icon">
 
-        // fixme after click, component keeps icon in circle
         <IconButton size="large"
                     aria-label="account of current user"
                     aria-controls="menu-appbar"

@@ -26,6 +26,7 @@ export default function ChangeLanguageButton() {
         handleClose();
     }
 
+    // fixme after click, component keeps icon in circle
     return (
         <div className="select-language-icon">
             <IconButton size="large"
@@ -38,7 +39,6 @@ export default function ChangeLanguageButton() {
 
             </IconButton>
 
-            // fixme after click, component keeps icon in circle
             <Menu
                 id="select-language"
                 anchorEl={an}

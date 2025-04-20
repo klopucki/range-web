@@ -11,6 +11,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import ListItemText from "@mui/material/ListItemText";
 import {useNavigate} from "react-router-dom";
 import {useTranslation} from "react-i18next";
+import Box from "@mui/material/Box";
 
 const drawerWidth = 240;
 
@@ -22,7 +23,6 @@ export default function Nav({open}) {
     // fixme smooth transition doesn't work
     const openedMixin = (theme: Theme): CSSObject => ({
         width: drawerWidth,
-        willChange: 'width',
         transition: theme.transitions.create('width', {
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.enteringScreen,
@@ -37,9 +37,8 @@ export default function Nav({open}) {
         }),
         overflowX: 'hidden',
         width: `calc(${theme.spacing(7)} + 1px)`,
-        willChange: 'width',
-        [theme.breakpoints.up('sm')]: {
-            width: `calc(${theme.spacing(8)} + 1px)`,
+        [theme.breakpoints.down('md')]: {
+            display: `none`
         },
     });
 
@@ -68,6 +67,7 @@ export default function Nav({open}) {
         }),
     );
 
+    // todo replace index with icon
     function getListItemButton(name: string, path, index) {
         return <ListItem key={name} disablePadding sx={{display: 'block'}}>
             <ListItemButton onClick={() => navigate(path)} sx={[
@@ -89,19 +89,20 @@ export default function Nav({open}) {
     }
 
     return <Drawer variant="permanent" open={open}>
+        <Box sx={{width: 250}} role="presentation">
+            <div style={{height: "50px"}}></div>
+            <Divider/>
 
-        <div style={{height: "50px"}}></div>
-        <Divider/>
+            <List>
+                {getListItemButton(t('nav.home'), '*', 1)}
+                {getListItemButton(t('nav.profile'), '/profile', 2)}
+                {getListItemButton(t('nav.calendar'), '/calendar', 3)}
+                {getListItemButton(t('nav.competitions'), '/competitions', 4)}
+                {getListItemButton(t('nav.shooters'), '/shooters', 5)}
+                {getListItemButton(t('nav.visits'), '/visits', 6)}
+            </List>
 
-        <List>
-            {getListItemButton(t('nav.home'), '*', 1)}
-            {getListItemButton(t('nav.profile'), '/profile', 2)}
-            {getListItemButton(t('nav.calendar'), '/calendar', 3)}
-            {getListItemButton(t('nav.competitions'), '/competitions', 4)}
-            {getListItemButton(t('nav.shooters'), '/shooters', 5)}
-            {getListItemButton(t('nav.visits'), '/visits', 6)}
-        </List>
-
-        <Divider/>
+            <Divider/>
+        </Box>
     </Drawer>
 }

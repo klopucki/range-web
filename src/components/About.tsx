@@ -6,6 +6,6 @@ var styles = {
 export default class About extends React.Component {
 
     render() {
-        return <div style={styles}>ABOUT</div>
+        return <>ABOUT</>
     }
 }
