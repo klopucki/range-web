@@ -26,15 +26,22 @@ export function Layout() {
                             <Nav.Link>
                                 <Link to="/" className="d-block">Home</Link>
                             </Nav.Link>
-                            <NavDropdown title="Reservations" id="transport">
+                            <NavDropdown title="Reservations" id="reservations-id">
                                 <NavDropdown.Item>
-                                    <Link to="/reservation/add" className="d-block">Track reservation</Link>
+                                    <Link to="/reservation/new" className="d-block">Reserve Track</Link>
+                                </NavDropdown.Item>
+                                <NavDropdown.Divider/>
+                                <NavDropdown.Item>
+                                    <Link to="/reservations/1" className="d-block">My Reservations</Link>
                                 </NavDropdown.Item>
                                 <NavDropdown.Divider/>
                                 <NavDropdown.Item>
                                     <Link to="/reservations" className="d-block">All Reservations</Link>
                                 </NavDropdown.Item>
                             </NavDropdown>
+                            <Nav.Link>
+                                <Link to="/competitions" className="d-block">Competitions</Link>
+                            </Nav.Link>
                             <Nav.Link>
                                 <Link to="/shooters" className="d-block">Shooters</Link>
                             </Nav.Link>

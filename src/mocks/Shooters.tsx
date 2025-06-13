@@ -7,7 +7,8 @@ export const shooters: Shooter[] = [
         lastName: "Kosz",
         age: 30,
         licence: "BGK1232",
-        address: "Kowalska 54, 12-234 Warszawa"
+        address: "Kowalska 54, 12-234 Warszawa",
+        sportClub: "FUN GUN"
     },
     {
         id: 2,
@@ -15,7 +16,8 @@ export const shooters: Shooter[] = [
         lastName: "Stępień",
         age: 31,
         licence: "LBP3332",
-        address: "Zemborska 54, 12-234 Krzczonów"
+        address: "Zemborska 54, 12-234 Krzczonów",
+        sportClub: "Shooter"
     },
     {
         id: 3,
@@ -23,7 +25,8 @@ export const shooters: Shooter[] = [
         lastName: "Batory",
         age: 18,
         licence: "XD328192731-3476",
-        address: "Częstochowska 54, 25-222 Łódz"
+        address: "Częstochowska 54, 25-222 Łódz",
+        sportClub: "Braterstwo"
     },
     {
         id: 4,
@@ -31,7 +34,8 @@ export const shooters: Shooter[] = [
         lastName: "Szulc",
         age: 43,
         licence: "KLSP-736-3438",
-        address: "Lubelska 12, 19-765 Rzeszów"
+        address: "Lubelska 12, 19-765 Rzeszów",
+        sportClub: ""
     },
     {
         id: 5,
@@ -39,7 +43,8 @@ export const shooters: Shooter[] = [
         lastName: "Wrona",
         age: 57,
         licence: "PPL-12-4323-234-",
-        address: "Warszawska 4, 02-024 Gorzów Wlkp."
+        address: "Warszawska 4, 02-024 Gorzów Wlkp.",
+        sportClub: ""
     },
     {
         id: 6,
@@ -47,7 +52,8 @@ export const shooters: Shooter[] = [
         lastName: "Żyta",
         age: 26,
         licence: "GHHS-39475-3984754",
-        address: "Górnicza 2, 20-014 Łęczna"
+        address: "Górnicza 2, 20-014 Łęczna",
+        sportClub: ""
     },
     {
         id: 7,
@@ -55,5 +61,6 @@ export const shooters: Shooter[] = [
         lastName: "Kot",
         age: 35,
         licence: "CKK-397-5857",
-        address: "Rekinia 54/22, 12-234 Chrząszczyzębożyce"
+        address: "Rekinia 54/22, 12-234 Chrząszczyzębożyce",
+        sportClub: ""
     }];

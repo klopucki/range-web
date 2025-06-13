@@ -10,8 +10,10 @@ import {Event} from "./types/events/event.ts";
 import {news} from "./mocks/News.tsx";
 import {caruselData} from "./mocks/CarouselData.tsx";
 
+
+export const CURRENT_USER_ID = 1; // todo fetch
+
 function App() {
-    const navigate = useNavigate();
 
     const [newsData, setNewsData] = useState<Event[]>([]);
     useEffect(() => {
@@ -23,6 +25,7 @@ function App() {
         setFeaturedNews(caruselData);
     }, [])
 
+    const navigate = useNavigate();
     const handleClick = (id: any) => {
         navigate(`/event/${id}`);
     };
