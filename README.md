@@ -15,7 +15,7 @@ i w przeglądarce przejść na stronę internetową https://localhost:49324/
 
 ### Strona główna
 * Najważniejsze informacje o strzelnicy i wydarzeniach (tzw. niusy)
-
+    
 ### Rezerwacja
 * Podstorna rezerwacji toru (Reserve Track) - tutaj zarezerwujesz tor na określoną godzine danego dnia
 * Podstrona moich rezerwacij (My Reservations) - zobaczysz wszystkie swoje rezerwacje
