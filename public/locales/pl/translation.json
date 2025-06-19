@@ -1,0 +1,145 @@
+{
+  "navbar": {
+    "home": "Home",
+    "trackReservation": "Rezerwacja Toru",
+    "competitions": "Zawody",
+    "shooters": "Strzelcy",
+    "register": "Zarejestruj",
+    "login": "Zaloguj",
+    "logout": "Wyloguj"
+  },
+  "event": {
+    "latest": "Najnowsze Wiadomości",
+    "back": "Powrót",
+    "notFound": "Brak Wydarzeń",
+    "date": "Data",
+    "location": "Lokalizacja",
+    "description": "Opis",
+    "organizer": "Organizator"
+  },
+  "reservations": {
+    "deleteConfirmation": "Czy jesteś pewny że chcesz usunąć tą rezerwację?",
+    "listReservations": "Lista Rezerwacji",
+    "filters": {
+      "filters": "Filtruj",
+      "searchBy": "Znajdz (nazwa, klub, tor...)",
+      "from": "Od (data)",
+      "to": "Do (data)"
+    },
+    "reserveTrack": "Zarezerwuj Tor",
+    "list": {
+      "firstName": "Imię",
+      "lastName": "Nazwisko",
+      "licence": "Licencja",
+      "track": "Tor",
+      "club": "Klub",
+      "from": "Od",
+      "to": "Do",
+      "action": "Akcja",
+      "noRecords": "Brak Rezerwacji",
+      "delete": "Usuń"
+    },
+    "reservation": {
+      "start": "Data i godzina rezerwacji (Start)",
+      "end": "Data i godzina rezerwacji (Koniec)",
+      "withSupport": "Potrzebuję osoby asystującej",
+      "choose": "Wybierz",
+      "yes": "Tak",
+      "no": "Nie",
+      "track": "Tor",
+      "ownGun": "Strzelam z własnej broni",
+      "reserve": "Rezerwuj"
+    }
+  },
+  "shooters": {
+    "search": "Szukaj",
+    "searchPlaceholder": "Wpisz imię lub nazwisko...",
+    "new": "Nowy Strzelec",
+    "list": {
+      "firstname": "Imię",
+      "lastname": "Nazwisko",
+      "age": "Wiek",
+      "licence": "Numer Licencji",
+      "address": "Adres",
+      "actions": "Akcje",
+      "noResults": "Brak Wyników",
+      "edit": "Edytuj"
+    },
+    "details": {
+      "edit": "Edytuj Strzelca",
+      "addShooter": "Dodaj Nowego Strzelca",
+      "firstname": "Imię",
+      "lastname": "Nazwisko",
+      "age": "Wiek",
+      "licence": "Numer Licencji",
+      "club": "Klub",
+      "address": "Adres",
+      "update": "Zaktualizuj",
+      "add": "Dodaj",
+      "cancel": "Anuluj",
+      "placeholder": {
+        "firstname": "Wpisz Imię",
+        "lastname": "Wpisz Nazwisko",
+        "licence": "Podaj Numer Licencji",
+        "club": "Przynależność Do Klubu Sportowego",
+        "address": "Pełny Adres"
+      }
+    }
+  },
+  "competitions": {
+    "list": {
+      "filter": "Filtrowanie",
+      "create": "Utrzórz Zawody",
+      "noResult": "Brak Pasujących Wyników...",
+      "closed": "Zamknięte",
+      "new": "Nowe",
+      "day": "Dzień Zawodów",
+      "registerTo": "Rejestracja Do",
+      "extendLicence": "Rozszerza Licencję",
+      "yes": "Tak",
+      "no": "Nie",
+      "details": "Szczegóły",
+      "edit": "Edytuj",
+      "alreadyRegistered": "Zapisany",
+      "register": "Zapisz Się",
+      "placeholder": {
+        "filter": "Wpisz Tytuł Zawodów..."
+      }
+    },
+    "form": {
+      "alerts":{
+        "mandatoryTitle": "Tytuł Jest Wymagany",
+        "dateTitle": "Data Wydarzenia Jest Wymagana"
+      },
+      "edit": "Edytuj Zawody",
+      "add": "Dodaj Nowe Zawody",
+      "title": "Tytuł Zawodów",
+      "date": "Data Wydarzenia",
+      "registerTo": "Rejestracja Do",
+      "extendsLicence": "Przedłuża Licencje",
+      "closed": "Zawody Zamknięte",
+      "img": "Url Do Zdjęcia (Opcjonalnie)",
+      "description": "Opis Zawodów",
+      "addCompetition": "Dodaj Zawody",
+      "updateCompetition": "Zapisz Zmiany",
+
+      "placeholder": {
+        "title": "Wpisz Tytuł Zawodów",
+        "description": "Opisz Zawody..."
+      }
+    },
+    "details": {
+      "eventDate": "Data Wydarzenia",
+      "registerTo": "Rejestracja Do",
+      "extendsLicence": "Przedłużenie Licencji",
+      "yes": "Tak",
+      "no": "Nie",
+      "alreadyJoined": "Już Zapisany",
+      "join":"Zapisz Się",
+      "edit": "Edytuj",
+      "registered": "Zapisałęś Się Na Zawody",
+      "signedUpShooters": "Zapisani Zawodnicy",
+      "noResults": "Brak Wyników"
+    }
+  }
+}

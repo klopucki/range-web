@@ -1,9 +1,12 @@
-.user-details-icon {
-  position: fixed;
-  right: 30px;
+﻿.logo {
+    height: 40px;
+    margin-right: 10px;
 }
 
-.select-language-icon {
-  position: fixed;
-  right: 100px;
+a {
+    text-decoration: none;
+}
+
+a, a:hover {
+    color: inherit;
 }
