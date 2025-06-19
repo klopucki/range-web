@@ -6,5 +6,6 @@ export type Shooter = {
     // birthDate: Date,
     age: number,
     licence: string,
-    address: string
+    address: string,
+    sportClub: string
 }

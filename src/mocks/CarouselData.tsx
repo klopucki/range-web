@@ -21,6 +21,6 @@ export const caruselData = [
         id: 4,
         title: "AI and the Future of Web Development",
         description: "How AI tools are shaping frontend development...",
-        image: "https://picsum.photos/700/200?random=3",
+        image: "https://picsum.photos/700/200?random=4",
     },
 ];

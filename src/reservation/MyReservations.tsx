@@ -3,15 +3,19 @@ import Form from "react-bootstrap/Form";
 import {useEffect, useState} from "react";
 import Accordion from "react-bootstrap/Accordion";
 import Table from "react-bootstrap/Table";
-import {Reservation} from "../types/tracks/Reservation.tsx";
+import {useParams} from "react-router-dom";
 import {reservations} from "../mocks/Reservations.tsx";
 import {ReservationItem} from "./ReservationItem.tsx";
+import {Reservation} from "../types/tracks/Reservation.tsx";
 
-export const AllReservations = () => {
+export const MyReservations = () => {
+
+    const {userId} = useParams();
 
     const [myReservations, setMyReservations] = useState<Reservation[]>([]);
     useEffect(() => {
-        setMyReservations(reservations);
+        // @ts-ignore
+        setMyReservations(reservations.filter(r => r.userId === +userId));
     }, [])
 
     return (

@@ -6,12 +6,19 @@ import {useEffect, useState} from "react";
 import {shooters} from "../mocks/Shooters.tsx";
 import {Shooter} from "../types/shooters/Shooter.tsx";
 import {ShooterItem} from "./ShooterItem.tsx";
+import Button from "react-bootstrap/Button";
+import {useNavigate} from "react-router-dom";
 
 export const ShootersList = () => {
     const [shootersList, setShootersList] = useState<Shooter[]>([]);
     useEffect(() => {
         setShootersList(shooters);
     }, [])
+
+    const navigate = useNavigate();
+    const newUserPage = () => {
+        navigate(`/shooters/new`);
+    };
 
     return (
         <Container fluid>
@@ -23,6 +30,7 @@ export const ShootersList = () => {
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
+            <Button className="d-flex" variant="outline-success" onClick={() => newUserPage()}>New Shooter</Button>
             <Table striped bordered hover>
                 <thead>
                 <tr>

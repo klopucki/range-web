@@ -1,12 +1,31 @@
-# React + Vite
+# Mini zarządzanie strzelnicą - informator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dzięki aplikacji, osoby pracujące na strzelnicy mają pełny wgląd kto przychodzi na strzelnicę 
+oraz minimalizują liczbę formalności np. organizacja wejść czy zmudne rejestrowanie 
+sportowców na zawody.
 
-Currently, two official plugins are available:
+## Opis funkcji
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Strona główna
+* Najważniejsze informacje o strzelnicy i wydarzeniach (tzw. niusy)
 
-## Expanding the ESLint configuration
+### Rezerwacja
+* Podstorna rezerwacji toru (Reserve Track) - tutaj zarezerwujesz tor na określoną godzine danego dnia
+* Podstrona moich rezerwacij (My Reservations) - zobaczysz wszystkie swoje rezerwacje
+* Podstrona wszstkich rezerwacji (All Reservations) - to widok dla adminów / właścicieli strzelnic żeby podejrzeć wszystkie rezerwacje, ewentualnie odfiltrować odpowiednie
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Zawody (Competitions)
+* Strona prezentuje wszystkie aktualne oraz przeszłe zawody
+* Do każdych zawodów można przejść bezpośrednio i zobaczyć szczegóły wydarzenia (jest możliwość rejestracji ale póki co tylko przycisk który wyświetla prosty modal)
+
+### Strzelcy (Strona przeznaczona dla administratorów)
+* Lista osób przychodzących na strzelnicę (strzelnice prowadzą taki rejestr)
+* Możliwość dodawania i edytowania danych strzelca.
+
+## Co dalej?
+* Jeszcze bardziej połączyć ze sobą w/w funkcjonalności w taki sposób aby między wieloma stronami była silna interakcja np. dodanie walidacji na rezerwację tj. tylko jedna osoba może zarezerwować tor w tym samym czasie.
+* Przywrócenie internacjonalizacji z pierwszego zadania.
+* Zrobić stronę logowania i rejestracji użytkownika (preferowany OAuth2)
+* Podpiąć bazę danych.
+* Popracować nad stylami
+
