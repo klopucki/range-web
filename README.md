@@ -4,6 +4,13 @@ Dzięki aplikacji, osoby pracujące na strzelnicy mają pełny wgląd kto przych
 oraz minimalizują liczbę formalności np. organizacja wejść czy zmudne rejestrowanie 
 sportowców na zawody.
 
+## Uruchomienie
+Po pobraniu projektu należy projekt zbudować tj. dociągnąć odpowiednie zależności
+```npm install```
+Oraz uruchomić
+```npm run dev```
+i w przeglądarce przejść na stronę internetową https://localhost:49324/
+
 ## Opis funkcji
 
 ### Strona główna
@@ -42,3 +49,4 @@ Podstawowe założenie biznesowe zostały spełnione. Przy niewielkim nakłądzi
 * dynamiczna zmiana języka ang-pl - internacjonalizacja
 * walidacje formularzy (2 różne sposoby)
 * zdecydowanie poprawione style i zaimplementowane komponenty bardziej po mojemu, wykorzystanie kompentów takich jak Card czy Accordiony w których sekcje są bardziej wyróżnione i odseparowane od siebie.
+
