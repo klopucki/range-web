@@ -12,7 +12,7 @@ Oraz uruchomić
 i w przeglądarce przejść na stronę internetową https://localhost:49324/
 
 ## Opis funkcji
-
+    
 ### Strona główna
 * Najważniejsze informacje o strzelnicy i wydarzeniach (tzw. niusy)
     
@@ -39,13 +39,14 @@ i w przeglądarce przejść na stronę internetową https://localhost:49324/
 ## Podsumowanie Całego projektu
 Na OAuth2 oraz Bazę danych zabrakło mi czasu chociaż aplikacja jest przygotowana do podpięcia backendu przez zastosowanie mocków dla list.
 
-Fajnie byłoby dodać jakieś ciekawsze zarządzanie zdjęciami - w moim rozwiązaniu wykorzystałem serwis z losowymi zdjęciami.
+Fajnie byłoby dodać jakieś ciekawsze zarządzanie ze zdjęciami - w moim rozwiązaniu wykorzystałem serwis z losowymi zdjęciami.
 
 Podstawowe założenie biznesowe zostały spełnione. Przy niewielkim nakłądzie pracy aplikacja byłaby gotowa do wdrożenia produkcyjnego.
 
 ### Dodatkowe funkcje w ramach ostatniego zadania
 * mapa
 * przełącznik pomiędzy trybem ciemnym i jasnym
+* localStorage to przechowywania flagi trybu ciemnego lub jasnego
 * dynamiczna zmiana języka ang-pl - internacjonalizacja
 * walidacje formularzy (2 różne sposoby)
 * zdecydowanie poprawione style i zaimplementowane komponenty bardziej po mojemu, wykorzystanie kompentów takich jak Card czy Accordiony w których sekcje są bardziej wyróżnione i odseparowane od siebie.
