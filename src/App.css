@@ -1,8 +1,12 @@
-﻿.logo{
-    height:40px;
-    margin-right:10px;
+﻿.logo {
+    height: 40px;
+    margin-right: 10px;
 }
-a{
-    text-decoration:none;
-    color:unset;
+
+a {
+    text-decoration: none;
+}
+
+a, a:hover {
+    color: inherit;
 }

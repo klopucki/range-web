@@ -5,5 +5,6 @@ export type Competition = {
     registrationDate: string,
     extendsLicence: boolean,
     description: string,
-    img: string
+    img: string,
+    isClosed: boolean
 }

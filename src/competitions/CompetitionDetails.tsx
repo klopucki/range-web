@@ -1,118 +1,111 @@
+import {Alert, Button, Container, ListGroup} from "react-bootstrap";
+import {Link, useParams} from "react-router-dom";
+import {competitions, registeredShooters} from "../mocks/Competitions.tsx";
+import Card from "react-bootstrap/Card";
 import {useEffect, useState} from "react";
-import {Badge, Button, Col, Container, Image, Modal, Row} from "react-bootstrap";
-import {useParams} from "react-router-dom";
-import {Competition} from "../types/competitions/Competition.tsx";
-import {competitions} from "../mocks/Competitions.tsx";
+import {Shooter} from "../types/shooters/Shooter.tsx";
+import {shooters} from "../mocks/Shooters.tsx";
+import {CURRENT_USER_ID} from "../App.tsx";
+import {useTranslation} from "react-i18next";
 
 export const CompetitionDetails = () => {
 
     const {competitionId} = useParams();
+    const competition = competitions.find(c => c.id === +competitionId!);
+    const [isRegistered, setIsRegistered] = useState(false);
+    const {t} = useTranslation();
 
-    const [competition, setCompetition] = useState<Competition>({
-        id: 3,
-        title: 'PIRO',
-        date: '12-23-2025',
-        registrationDate: '12-15-2025',
-        extendsLicence: true,
-        description: 'Secret',
-        img: 'https://via.placeholder.com/400x300?text=Competition+Image'
-    });
+    if (!competition) {
+        return <Container className="mt-4">Nie znaleziono zawodów.</Container>;
+    }
+
+    const [showAlert, setShowAlert] = useState(false);
+    const handleClick = () => {
+        setShowAlert(true);
+
+        registeredShooters.push({shooterId: CURRENT_USER_ID, eventId: +competitionId!})
+
+        setUpEventShooters();
+
+        setTimeout(() => setShowAlert(false), 4000);
+    };
+
+    const [eventShooters, setEventShooters] = useState<Shooter[]>([]); // List of registered shooters
+
+    function setUpEventShooters() {
+        const shooterIds = registeredShooters.filter(rs => rs.eventId === +competitionId!).map(value => value.shooterId);
+        const s: Shooter[] = shooters.filter(shooter => shooterIds.includes(shooter.id))
+        setEventShooters(s);
+        setIsRegistered(s.some(shooter => shooter.id === CURRENT_USER_ID));
+    }
 
     useEffect(() => {
-        if (competitionId) {
-            const comp = competitions.find(c => c.id === +competitionId);
+        setUpEventShooters();
+    }, []);
 
-            if (comp) {
-                setCompetition(comp);
-            }
-        }
-    }, [competitionId]);
-
-    const [showModal, setShowModal] = useState(false);
-
-    const handleRegister = () => {
-        setShowModal(true);
-    };
-
-    const handleConfirm = () => {
-        setShowModal(false);
-    };
 
     return (
-        <div style={{backgroundColor: "#f8f9fa", minHeight: "100vh", paddingBottom: "3rem"}}>
-            <div style={{position: "relative"}}>
-                <Image src={competition.img} fluid style={{width: "100%", maxHeight: "400px", objectFit: "cover"}}/>
-                <div
-                    style={{
-                        position: "absolute",
-                        bottom: 20,
-                        left: 30,
-                        color: "white",
-                        backgroundColor: "rgba(0, 0, 0, 0.6)",
-                        padding: "1rem 2rem",
-                        borderRadius: "10px"
-                    }}
+        <Container className="mt-4">
+            <Card className="shadow-sm">
+                {competition.img && (
+                    <Card.Img variant="top" src={competition.img} style={{maxHeight: 300, objectFit: "cover"}}/>
+                )}
+                <Card.Body>
+                    <Card.Title>{competition.title}</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">#{competition.id}</Card.Subtitle>
+
+                    <p><strong>{t('competitions.details.eventDate')}:</strong> {competition.date}</p>
+                    <p><strong>{t('competitions.details.registerTo')}:</strong> {competition.registrationDate}</p>
+                    <p><strong>{t('competitions.details.extendsLicence')}:</strong> {competition.extendsLicence ? t('competitions.details.yes') : t('competitions.details.no')}</p>
+
+                    <hr/>
+                    <p>{competition.description}</p>
+
+                    <div className="mt-3">
+                        <Button
+                            variant="success"
+                            onClick={handleClick}
+                            className="me-2"
+                            disabled={isRegistered || competition.isClosed}
+                        >
+                            {isRegistered ? t('competitions.details.alreadyJoined') : t('competitions.details.join')}
+                        </Button>
+                        <Button size="sm" as={Link} to={`/competitions/${competitionId}/upsert`}
+                                variant="secondary">{t('competitions.details.edit')}</Button>
+
+                    </div>
+                </Card.Body>
+            </Card>
+
+            {showAlert && (
+                <Alert
+                    variant="success"
+                    onClose={() => setShowAlert(false)}
+                    dismissible
+                    className="mt-3"
                 >
-                    <h1>{competition.title}</h1>
-                    {competition.extendsLicence && (
-                        <Badge bg="success" className="mt-2">
-                            Extends Licence
-                        </Badge>
+                    ✅ {t('competitions.details.registered')}
+                </Alert>
+            )}
+
+            <Card className="mt-4 shadow-sm">
+                <Card.Header>📋 {t('competitions.details.signedUpShooters')}</Card.Header>
+                <ListGroup variant="flush">
+                    {eventShooters.length > 0 ? (
+                        eventShooters.map((shooter) => (
+                            <ListGroup.Item key={shooter.id}>
+                                {shooter.firstName} {shooter.lastName}
+                                <span className="float-end text-muted">
+                            15 pkt
+                        </span>
+                            </ListGroup.Item>
+                        ))
+                    ) : (
+                        <ListGroup.Item>{t('competitions.details.noResults')}</ListGroup.Item>
+
                     )}
-
-                </div>
-            </div>
-
-            <Container className="mt-5">
-                <Row className="mb-4">
-                    <Col md={6} className="mb-3">
-                        <div className="mt-3">
-                            <Button variant="success" size="lg" onClick={handleRegister}>
-                                Register Now
-                            </Button>
-                        </div>
-                    </Col>
-                </Row>
-
-                <Row className="mb-4">
-                    <Col md={6} className="mb-3">
-                        <h4>Date of Competition</h4>
-                        <p>{new Date(competition.date).toLocaleDateString()}</p>
-                    </Col>
-                    <Col md={6} className="mb-3">
-                        <h4>Registration Deadline</h4>
-                        <p>{new Date(competition.registrationDate).toLocaleDateString()}</p>
-                    </Col>
-
-                </Row>
-
-                <Row>
-                    <Col>
-                        <h4>About the Competition</h4>
-                        <p>
-                            The {competition.title} is an exciting event where top competitors will showcase
-                            their skills. Don't miss your chance to participate or cheer them on!
-                        </p>
-                    </Col>
-                </Row>
-            </Container>
-
-            <Modal show={showModal} centered>
-                <Modal.Header closeButton>
-                    <Modal.Title>Confirmation</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <p>We will wait for you on this event in the event day. </p>
-                    <p>We sent you confirmation on your <b>email</b>.</p>
-                    Best shoots!
-                </Modal.Body>
-                <Modal.Footer>
-
-                    <Button variant="primary" onClick={handleConfirm}>
-                        OK
-                    </Button>
-                </Modal.Footer>
-            </Modal>
-        </div>
+                </ListGroup>
+            </Card>
+        </Container>
     );
 }

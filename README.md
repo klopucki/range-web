@@ -23,9 +23,22 @@ sportowców na zawody.
 * Możliwość dodawania i edytowania danych strzelca.
 
 ## Co dalej?
-* Jeszcze bardziej połączyć ze sobą w/w funkcjonalności w taki sposób aby między wieloma stronami była silna interakcja np. dodanie walidacji na rezerwację tj. tylko jedna osoba może zarezerwować tor w tym samym czasie.
-* Przywrócenie internacjonalizacji z pierwszego zadania.
-* Zrobić stronę logowania i rejestracji użytkownika (preferowany OAuth2)
-* Podpiąć bazę danych.
-* Popracować nad stylami
+-[x] Jeszcze bardziej połączyć ze sobą w/w funkcjonalności w taki sposób aby między wieloma stronami była silna interakcja np. dodanie walidacji na rezerwację tj. tylko jedna osoba może zarezerwować tor w tym samym czasie.
+-[x] Przywrócenie internacjonalizacji z pierwszego zadania.
+-[ ] Zrobić stronę logowania i rejestracji użytkownika (preferowany OAuth2)
+-[ ] Podpiąć bazę danych.
+-[x] Popracować nad stylami
 
+## Podsumowanie Całego projektu
+Na OAuth2 oraz Bazę danych zabrakło mi czasu chociaż aplikacja jest przygotowana do podpięcia backendu przez zastosowanie mocków dla list.
+
+Fajnie byłoby dodać jakieś ciekawsze zarządzanie zdjęciami - w moim rozwiązaniu wykorzystałem serwis z losowymi zdjęciami.
+
+Podstawowe założenie biznesowe zostały spełnione. Przy niewielkim nakłądzie pracy aplikacja byłaby gotowa do wdrożenia produkcyjnego.
+
+### Dodatkowe funkcje w ramach ostatniego zadania
+* mapa
+* przełącznik pomiędzy trybem ciemnym i jasnym
+* dynamiczna zmiana języka ang-pl - internacjonalizacja
+* walidacje formularzy (2 różne sposoby)
+* zdecydowanie poprawione style i zaimplementowane komponenty bardziej po mojemu, wykorzystanie kompentów takich jak Card czy Accordiony w których sekcje są bardziej wyróżnione i odseparowane od siebie.

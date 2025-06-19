@@ -1,0 +1,145 @@
+{
+  "navbar": {
+    "home": "Home",
+    "trackReservation": "Track Reservation",
+    "competitions": "Competitions",
+    "shooters": "Shooters",
+    "register": "Register",
+    "login": "Login",
+    "logout": "Logout"
+  },
+  "event": {
+    "latest": "Latest News",
+    "back": "Back to Events",
+    "notFound": "Event Not Found",
+    "date": "Date",
+    "location": "Location",
+    "description": "Description",
+    "organizer": "Organizer"
+  },
+  "reservations": {
+    "deleteConfirmation": "Are You Sure You Want To Remove This Reservation?",
+    "listReservations": "Reservations list",
+    "filters": {
+      "filters": "Filters",
+      "searchBy": "Search (name, club, track...)",
+      "from": "From (date)",
+      "to": "To (date)"
+    },
+    "reserveTrack": "Reserve Track",
+    "list": {
+      "firstName": "Firstname",
+      "lastName": "Lastname",
+      "licence": "Licence",
+      "track": "Track",
+      "club": "Club",
+      "from": "From",
+      "to": "To",
+      "action": "Action",
+      "noRecords": "No Reservation Found",
+      "delete": "Delete"
+    },
+    "reservation": {
+      "start": "Date & time of reservation (Start)",
+      "end": "Date & time of reservation (End)",
+      "withSupport": "Need Assistance",
+      "choose": "Choose",
+      "yes": "Yes",
+      "no": "No",
+      "track": "Track",
+      "ownGun": "Own A Gun",
+      "reserve": "Reserve"
+    }
+  },
+  "shooters": {
+    "search": "Search",
+    "searchPlaceholder": "Type first or last name...",
+    "new": "New Shooter",
+    "list": {
+      "firstname": "Firstname",
+      "lastname": "Lastname",
+      "age": "Age",
+      "licence": "Licence Number",
+      "address": "Address",
+      "actions": "Actions",
+      "noResults": "No Results",
+      "edit": "Edit"
+    },
+    "details": {
+      "edit": "Edit Shooter",
+      "addShooter": "Add New Shooter",
+      "firstname": "Firstname",
+      "lastname": "Lastname",
+      "age": "Age",
+      "licence": "Licence Number",
+      "club": "Club",
+      "address": "Address",
+      "update": "Update",
+      "add": "Add",
+      "cancel": "Cancel",
+      "placeholder": {
+        "firstname": "Type Firstname",
+        "lastname": "Type Lastname",
+        "licence": "Type Licence Number",
+        "club": "Type Sport Club",
+        "address": "Type Full Address"
+      }
+    }
+  },
+  "competitions": {
+    "list": {
+      "filter": "Filter",
+      "create": "Create Competition",
+      "noResult": "No Results",
+      "closed": "Closed",
+      "new": "New",
+      "day": "Competition Day",
+      "registerTo": "Register To",
+      "extendLicence": "Extends Licence",
+      "yes": "Yes",
+      "no": "No",
+      "details": "Details",
+      "edit": "Edit",
+      "alreadyRegistered": "Already Registered",
+      "register": "Register",
+      "placeholder": {
+        "filter": "Type Competition Title..."
+      }
+    },
+    "form": {
+      "alerts":{
+        "mandatoryTitle": "Title Is Mandatory",
+        "dateTitle": "Event Date Is Mandatory"
+      },
+      "edit": "Edit Competition",
+      "add": "Add New Competition",
+      "title": "Competition Title",
+      "date": "Event Date",
+      "registerTo": "Register To",
+      "extendsLicence": "Extends Licence",
+      "closed": "Closed Competition",
+      "img": "Pic Url (Optional)",
+      "description": "Competition Description",
+      "addCompetition": "Add Competition",
+      "updateCompetition": "Save Changes",
+
+      "placeholder": {
+        "title": "Type Competition Title",
+        "description": "Describe Competition"
+      }
+    },
+    "details": {
+      "eventDate": "Date Of Event",
+      "registerTo": "Register To",
+      "extendsLicence": "Extends Licence",
+      "yes": "Yes",
+      "no": "No",
+      "alreadyJoined": "Already Joined",
+      "join": "Join",
+      "edit": "Edit",
+      "registered": "You Already Registered Signed Up For This Competition",
+      "signedUpShooters": "Signed Up Shooters",
+      "noResults": "No Results"
+    }
+  }
+}
