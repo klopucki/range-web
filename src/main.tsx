@@ -3,17 +3,17 @@ import ReactDOM from "react-dom/client";
 import App from './App.jsx'
 import './index.css'
 import {Layout} from './layout/Layout';
-import {Event} from './events/Event.tsx';
+import {EventPage} from './events/EventPage.tsx';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
-import {Reserve} from "./reservation/Reserve.tsx";
-import {ShootersList} from "./shooters/ShootersList.tsx";
-import {AllReservations} from "./reservation/AllReservations.tsx";
+import {ReserveTrack} from "./reservation/ReserveTrack.tsx";
+import {ShootersListComponent} from "./shooters/ShootersListComponent.tsx";
+import {ReservationsList} from "./reservation/ReservationsList.tsx";
 import {AddShooter} from "./shooters/AddShooter.tsx";
 import {ShooterDetails} from "./shooters/ShooterDetails.tsx";
-import {MyReservations} from "./reservation/MyReservations.tsx";
-import {NewCompetition} from "./competitions/NewCompetition.tsx";
-import {AllCompetitions} from "./competitions/AllCompetitions.tsx";
+import {UpsertCompetition} from "./competitions/UpsertCompetition.tsx";
+import {CompetitionsList} from "./competitions/CompetitionsList.tsx";
 import {CompetitionDetails} from "./competitions/CompetitionDetails.tsx";
+import './i18n'
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <React.StrictMode>
@@ -23,36 +23,36 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
                     <Route index element={<App/>}/>
                 </Route>
                 <Route path='/event/:id' element={<Layout/>}>
-                    <Route index element={<Event/>}/>
+                    <Route index element={<EventPage/>}/>
                 </Route>
 
                 <Route path='/reservation/new' element={<Layout/>}>
-                    <Route index element={<Reserve/>}/>
+                    <Route index element={<ReserveTrack/>}/>
                 </Route>
                 <Route path='/reservations' element={<Layout/>}>
-                    <Route index element={<AllReservations/>}/>
-                </Route>
-                <Route path='/reservations/:userId' element={<Layout/>}>
-                    <Route index element={<MyReservations/>}/>
+                    <Route index element={<ReservationsList/>}/>
                 </Route>
 
                 <Route path='/competitions/new' element={<Layout/>}>
-                    <Route index element={<NewCompetition/>}/>
+                    <Route index element={<UpsertCompetition/>}/>
                 </Route>
                 <Route path='/competitions' element={<Layout/>}>
-                    <Route index element={<AllCompetitions/>}/>
+                    <Route index element={<CompetitionsList/>}/>
                 </Route>
                 <Route path='/competitions/:competitionId' element={<Layout/>}>
                     <Route index element={<CompetitionDetails/>}/>
                 </Route>
+                <Route path='/competitions/:competitionId/upsert' element={<Layout/>}>
+                    <Route index element={<UpsertCompetition/>}/>
+                </Route>
 
                 <Route path='/shooters' element={<Layout/>}>
-                    <Route index element={<ShootersList/>}/>
+                    <Route index element={<ShootersListComponent/>}/>
                 </Route>
                 <Route path='/shooters/new' element={<Layout/>}>
                     <Route index element={<AddShooter/>}/>
                 </Route>
-                <Route path='/shooter/:id' element={<Layout/>}>
+                <Route path='/shooters/:id/edit' element={<Layout/>}>
                     <Route index element={<ShooterDetails/>}/>
                 </Route>
             </Routes>

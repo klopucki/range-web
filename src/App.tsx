@@ -6,21 +6,23 @@ import Card from 'react-bootstrap/Card';
 import {Carousel} from "react-bootstrap";
 import {useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
-import {Event} from "./types/events/event.ts";
+import {AppEvent} from "./types/events/appEvent.ts";
 import {news} from "./mocks/News.tsx";
 import {caruselData} from "./mocks/CarouselData.tsx";
+import {useTranslation} from "react-i18next";
 
 
 export const CURRENT_USER_ID = 1; // todo fetch
 
 function App() {
+    const {t} = useTranslation();
 
-    const [newsData, setNewsData] = useState<Event[]>([]);
+    const [newsData, setNewsData] = useState<AppEvent[]>([]);
     useEffect(() => {
         setNewsData(news);
     }, [])
 
-    const [featuredNews, setFeaturedNews] = useState<Event[]>([]);
+    const [featuredNews, setFeaturedNews] = useState<AppEvent[]>([]);
     useEffect(() => {
         setFeaturedNews(caruselData);
     }, [])
@@ -48,7 +50,7 @@ function App() {
                 ))}
             </Carousel>
             <Container className="mt-4">
-                <h1 className="mb-4">Latest News</h1>
+                <h1 className="mb-4">{t('event.latest')}</h1>
                 <Row>
                     {newsData.map((item, index) => (
                         <Col key={index} md={6} lg={4} className="mb-4">
